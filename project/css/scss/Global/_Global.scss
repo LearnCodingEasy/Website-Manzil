@@ -1,0 +1,32 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 100% Main 16px */
+  font-size: 100%;
+}
+
+/* For Scrollbar */
+::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: #333;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 0.1rem;
+}
+
+/* For Selection */
+::-moz-selection {
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+::selection {
+  color: #fff;
+  background-color: var(--main-color);
+}

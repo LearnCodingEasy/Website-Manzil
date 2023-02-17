@@ -4,8 +4,29 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Manzil
+    // Animate
+    link(rel="stylesheet" href="css/libs/animate/v-3.7.1/animate.min.css")
+    // Bootstrap
+    link(rel="stylesheet" href="css/libs/bootstrap/bootstrap.min.css") 
+    // Fontawesome
+    link(rel="stylesheet" href="css/libs/Font/all.min.css")
+    // Nivo Slider
+    link(rel="stylesheet" href="css/libs/nivo-slider/nivo-slider.css")
     // Css Style
     link(rel="stylesheet" href="css/style.css") 
   body 
+    include header/header.pug
+    include main/main.pug
+    include footer/footer.pug
+
+    // JQuery
+    //- script(src='js/libs/jquery/JQuery-3.6.0.js') 
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js') 
+    // Bootstrap
+    script(src='js/libs/bootstrap/bootstrap.min.js') 
+    // Nivo Slider
+    script(src='js/libs/nivo-slider/jquery.nivo.slider.pack.js') 
+    script(src='js/libs/nivo-slider/jquery.nivo.slider.js') 
+    // Js Script
     script(src='js/script.js') 
     script(src="http://localhost:35729/livereload.js")

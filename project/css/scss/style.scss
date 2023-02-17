@@ -1,3 +1,28 @@
+// Font
+@import "Font/Font";
+
+// Variables
+@import "Variables/Variables.scss";
+
+// Global
+@import "Global/Global";
+
 body {
-  background-color: red;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  color: var(--body-color);
+  line-height: var(--body-line-height);
+  font-weight: var(--body-font-weight);
+  background: var(--body-bg);
+  // For Test
+  height: 10000px;
 }
+
+// Header
+@import "Header/Header.scss";
+
+// Slider
+@import "slider/slider";
+
+// Footer
+@import "footer/footer";
