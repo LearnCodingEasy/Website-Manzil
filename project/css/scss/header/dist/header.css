@@ -80,14 +80,15 @@ header .header-logo-nav {
   display: block;
   width: 100%;
   z-index: 5000;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 header .header-logo-nav::before {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
-  left: 300px;
+  left: 220px;
   top: 0;
   background-image: linear-gradient(to right, #f7941d 0%, #f7941d 100%);
 }
@@ -100,6 +101,7 @@ header .header-logo-nav .container .content {
 header .header-logo-nav .container .content .logo {
   margin-right: 2rem;
   margin-top: -37px;
+  width: 180px;
 }
 header .header-logo-nav .container .content .logo .container img {
   max-width: 100%;
@@ -322,15 +324,4 @@ header .header-logo-nav.header-scroll-with-window .container .content .logo .con
 
 .box-lest:not(:last-of-type) {
   padding-right: 0;
-}
-
-/* For Selection */
-::-moz-selection {
-  color: #fff;
-  background-color: var(--main-color);
-}
-
-::selection {
-  color: #fff;
-  background-color: var(--main-color);
 }

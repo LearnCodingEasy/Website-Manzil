@@ -1,0 +1,219 @@
+.teamMembers-section {
+  .teamMembers-wrapper {
+    position: relative;
+    .teamMembers-layer {
+      background-image: url(https://wp1.yogsthemes.com/demo/manzil/wp-content/uploads/2020/07/4-1.jpg);
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 600px;
+      background-attachment: fixed;
+      background-size: cover;
+      &:before {
+        position: absolute;
+        content: "";
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+    }
+    .container {
+      .teamMembers-inner {
+        .teamMembers-text {
+          .section-title {
+            h2 {
+            }
+          }
+          .section-subtitle {
+            h2 {
+            }
+          }
+        }
+        .teamMembers-slider {
+          .wrapper {
+            .inner {
+              .owl-carousel {
+                .item {
+                  position: relative;
+                  overflow: hidden;
+                  .image {
+                    position: relative;
+                    &:before {
+                      position: absolute;
+                      content: "";
+                      left: 0px;
+                      top: 0px;
+                      width: 0%;
+                      height: 100%;
+                      z-index: 1;
+                      transition: all 0.6s ease;
+                      background-color: rgba(0, 0, 0, 0.3);
+                      border-radius: 15px 15px 0px 15px;
+                    }
+                    img {
+                      border-radius: 15px 15px 0px 15px;
+                    }
+                    // ul
+                    .wrapper-social {
+                      position: absolute;
+                      left: 30px;
+                      top: -100%;
+                      opacity: 0;
+                      z-index: 2;
+                      padding-top: 20px;
+                      display: inline-block;
+                      transition: all 0.9s ease;
+                      &::before {
+                        background-image: linear-gradient(
+                          to right,
+                          #f7941d 0%,
+                          #f7941d 100%
+                        );
+                        position: absolute;
+                        content: "";
+                        left: 0px;
+                        top: -30px;
+                        right: 0px;
+                        bottom: -20px;
+                        transform: skewY(25deg);
+                      }
+                      li {
+                        position: relative;
+                        text-align: center;
+                        margin-bottom: 1px;
+                        display: block;
+                        a {
+                          position: relative;
+                          font-size: 18px;
+                          color: #ffffff;
+                          display: block;
+                          z-index: 1;
+                          padding: 14px 15px;
+                          background-color: rgba(0, 0, 0, 0);
+                          color: rgb(255, 255, 255);
+                          &::after {
+                            position: absolute;
+                            content: "";
+                            left: 0px;
+                            top: 0px;
+                            right: 0px;
+                            bottom: 0px;
+                            z-index: -1;
+                            opacity: 0;
+                            transition: all 600ms ease;
+                            background-color: var(--color-first);
+                            transform: skewY(25deg);
+                          }
+                          i {
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .text {
+                    position: relative;
+                    margin-left: 40px;
+                    margin-top: -50px;
+                    z-index: 4;
+                    padding: 22px 40px 22px 60px;
+                    &::before {
+                      position: absolute;
+                      content: "";
+                      left: 0px;
+                      top: 0px;
+                      right: 0px;
+                      bottom: 0px;
+                      transition: all 0.6s ease;
+                      background-color: var(--color-first);
+                      clip-path: polygon(
+                        90% 0,
+                        100% 50%,
+                        90% 100%,
+                        0% 100%,
+                        9% 50%,
+                        0% 0%
+                      );
+                    }
+                    h6 {
+                      position: relative;
+                      line-height: 1.3em;
+                      font-weight: 700;
+                      font-size: 20px;
+                      .child-link {
+                        text-decoration: none;
+                        color: var(--color-000);
+                      }
+                    }
+                    .description {
+                      position: relative;
+                      color: #ffffff;
+                      font-size: 15px;
+                      margin-top: 8px;
+                    }
+                    .parent-link {
+                      position: absolute;
+                      right: 20px;
+                      top: 40px;
+                      width: 60px;
+                      height: 40px;
+                      cursor: pointer;
+                      display: block;
+                      z-index: 20;
+                      cursor: pointer;
+                      transform: rotate(-90deg);
+                    }
+                  }
+
+                  &:hover {
+                    .image {
+                      &:before {
+                        width: 100%;
+                      }
+                      // ul
+                      .wrapper-social {
+                        top: 0;
+                        opacity: 1;
+                        &::before {
+                          background-image: linear-gradient(
+                            to right,
+                            #f7941d 0%,
+                            #f7941d 100%
+                          );
+                        }
+                        li {
+                          a {
+                            z-index: 2;
+                            &::after {
+                              transform: skewY(25deg);
+                            }
+                            i {
+                            }
+                          }
+                        }
+                      }
+                    }
+                    .text {
+                      h6 {
+                        a.change-theme {
+                        }
+                      }
+                      .description {
+                      }
+                      .parent-link {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

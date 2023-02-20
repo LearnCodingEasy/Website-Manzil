@@ -1,33 +1,335 @@
+/* Google Font */
+@import url(https://fonts.googleapis.com/css?family=Arimo:regular,500,600,700,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Arimo:regular,500,600,700,italic,500italic,600italic,700italic);
+/*
+===========================================================
+Todo ================= VARIABLES CSS ====================== 
+===========================================================
+*/
+:root {
+  --header-height: 3rem;
+  /*========== Colors ==========*/
+  /* Change favorite color to match images */
+  /*Green dark 33 - Green 171 - Green Blue 200*/
+  --hue-color: 33;
+  /*  Colors  */
+  --color-first: hsl(var(--hue-color), 93%, 54%);
+  --color-first-alt: hsla(var(--hue-color), 93%, 54%, 0.725);
+  --color-second: #f9f9f9;
+  --color-second: #f9f9f9;
+  --color-second: #f9f9f9;
+  --color-title: hsl(var(--hue-color), 93%, 54%);
+  --color-text: #707070;
+  --color-text-light: #a6a6a6;
+  --color-body: #fff;
+  --color-container: #ffffff;
+  --color-scrollbar-bg: #707070;
+  --color-scrollbar-thumb-bg: var(--color-first);
+  --color-button: var(--color-first);
+  --color-selection-bg: var(--color-first);
+  --color-fff: #fff;
+  --color-000: #000;
+  --color-section-first-bg: #000;
+  --color-section-second-bg: #000;
+  --color-box-first-bg: #000;
+  --color-box-second-bg: #000;
+  /*  Font => Size, Weight And Typography  */
+  --font-family-body: "Arimo", sans-serif;
+  --font-family-title: "Raleway", sans-serif;
+  --font-size-big: 2.25rem;
+  --font-size-h1: 1.5rem;
+  --font-size-h2: 1.25rem;
+  --font-size-h3: 1rem;
+  --font-size-normal: 0.938rem;
+  --font-size-small: 0.813rem;
+  --font-size-smaller: 0.75rem;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  /*  Margin  */
+  --m-0: 0;
+  --m-05: 0.5rem;
+  --m-1: 1rem;
+  --m-105: 1.5rem;
+  --m-2: 2rem;
+  --m-205: 2.5rem;
+  --m-3: 3rem;
+  /*  z index  */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  /*  Scrollbar  */
+  --scrollbar-width: 1rem;
+  --scrollbar-border-radius: 0.25rem;
+  /* Button */
+  --font-size-button: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    /*  Font and typography  */
+    --font-size-big: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+/*====================== BASE ======================*/
+/*
+===========================================================
+Todo ================= BASE CSS =========================== 
+===========================================================
+*/
 *,
-::after,
-::before {
+::before,
+::after {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  /* 100% Main 16px */
-  font-size: 100%;
 }
 
 /* For Scrollbar */
 ::-webkit-scrollbar {
-  width: 0.8rem;
-  background-color: #333;
+  width: var(--scrollbar-width);
+  background-color: var(--color-scrollbar-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--main-color);
-  border-radius: 0.1rem;
+  background-color: var(--color-scrollbar-thumb-bg);
+  border-radius: var(--scrollbar-border-radius);
 }
 
 /* For Selection */
 ::-moz-selection {
   color: #fff;
-  background-color: var(--main-color);
+  background-color: var(--color-selection-bg);
 }
 
 ::selection {
   color: #fff;
-  background-color: var(--main-color);
+  background-color: var(--color-selection-bg);
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: var(--m-0);
+}
+
+ul {
+  padding: var(--m-0);
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  border: none;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-normal);
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+.main {
+  overflow-x: hidden;
+}
+
+/*
+===========================================================
+Todo ================= Body CSS =========================== 
+===========================================================
+*/
+body {
+  /* Reset Body Margin*/
+  margin: 0;
+  /* Margin If The Header Is fixed Top And It Is First Element */
+  /* margin: var(--header-height) 0 0 0; */
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-normal);
+  background-color: var(--color-body);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+}
+
+/* Variables Dark theme */
+body.dark-theme {
+  --color-title: #f1f3f2;
+  --color-text: #f1f3f2;
+  --color-body: #1d2521;
+  --color-container: #27302c;
+}
+
+/*
+===========================================================
+Todo ================= Button Dark/Light ================== 
+===========================================================
+*/
+.change-theme {
+  position: absolute;
+  right: 1rem;
+  top: 1.8rem;
+  color: #000;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: var(--z-fixed);
+}
+@media screen and (min-width: 768px) {
+  .change-theme {
+    position: inherit;
+    margin-left: var(--m-2);
+  }
+}
+
+/*
+===========================================================
+Todo ================= CLASS CSS ========================== 
+===========================================================
+*/
+.section {
+  padding: 4rem 0 2rem;
+}
+.section .section-title {
+  font-size: var(--font-size-h1);
+  color: var(--color-title);
+  margin-bottom: var(--m-3);
+}
+.section .section-subtitle {
+  display: block;
+  color: var(--color-first);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--m-1);
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 8rem;
+  }
+}
+
+/*
+===========================================================
+Todo ================= Layout ============================= 
+===========================================================
+*/
+.bd-container {
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin-left: var(--m-2);
+  margin-right: var(--m-2);
+}
+@media screen and (min-width: 960px) {
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*
+===========================================================
+Todo ================= Header ============================= 
+===========================================================
+*/
+.header {
+  /* If You Use Header To Be Fixed Element */
+}
+
+/*
+===========================================================
+Todo ================= Button ============================= 
+===========================================================
+*/
+.first-button {
+  margin: 2rem 2rem 2rem 0;
+}
+.first-button a {
+  text-decoration: none;
+  outline: none !important;
+  border: none;
+  position: relative;
+  display: inline-block;
+  font-size: 19px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 600;
+  overflow: hidden;
+  border-radius: 7px;
+  padding: 10px 45px;
+  margin: 0 30px 0 0;
+  background-image: linear-gradient(to right, #f7941d 0%, #f7941d 100%);
+  z-index: 200000;
+}
+.first-button a:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.4s;
+  transform: scale(0.2, 1);
+  background-image: linear-gradient(to left, #f7941d 0%, #f7941d 100%);
+}
+.first-button a:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+  z-index: -1;
+}
+
+/*
+===========================================================
+Todo ================= Box ============================= 
+===========================================================
+*/
+.color {
+  display: block;
+  width: 100%;
+  height: 50px;
+  color: transparent;
+}
+.color.color-first {
+  color: var(--color-first);
+}
+.color.color-first-alt {
+  color: var(--color-first-alt);
+}
+.color.color-second {
+  color: var(--color-second);
+}
+.color.color-title {
+  color: var(--color-title);
+}
+.color.color-text {
+  color: var(--color-text);
+}
+.color.color-text-light {
+  color: var(--color-text-light);
 }

@@ -1,0 +1,187 @@
+.ourLatestNew-section {
+  background-color: var(--color-second);
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-inner .ourLatestNew-text {
+  text-align: center;
+  color: var(--color-000);
+  padding-bottom: 3rem;
+  font-size: 6vw;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-inner .ourLatestNew-text .section-title {
+  margin-bottom: var(--m-2);
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-inner .ourLatestNew-text .section-subtitle {
+  color: var(--color-000);
+  font-weight: bold;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-inner .ourLatestNew-text .section-subtitle h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 52px;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc((100% / 3) - 20px), 1fr));
+  grid-gap: 20px 20px;
+  /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
+  /* Medium Devices (Phones, 576px And 677px) = Bootstrap V5 Sm */
+}
+@media screen and (max-width: 575.98px) {
+  .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 677px) {
+  .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item .image {
+  border-radius: 10px;
+  z-index: 1;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item .image img {
+  border-radius: 10px;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text {
+  z-index: 2;
+  width: 95%;
+  margin: auto;
+  background-color: var(--color-fff);
+  position: relative;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: -25px;
+  height: max-content;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .member {
+  position: absolute;
+  top: -10px;
+  left: 30px;
+  background-color: #121247;
+  padding: 2px 15px;
+  border-radius: 10px;
+  color: var(--color-fff);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .time-comment {
+  display: flex;
+  margin-top: 2rem;
+  /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
+  /* Medium Devices (Phones, 576px And 677px) = Bootstrap V5 Sm */
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .time-comment .time {
+  color: var(--color-first);
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .time-comment .salish {
+  padding: 0 0.5rem;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .time-comment .comment span {
+  padding-right: 0.5rem;
+  transition: all 0.4s linear;
+}
+@media screen and (min-width: 576px) and (max-width: 677px) {
+  .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .time-comment {
+    flex-direction: column;
+  }
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .ourLatestNew-title {
+  display: block;
+  border-bottom: 3px dotted #999;
+  padding: 1.5rem 0;
+  transition: all 0.4s linear;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .ourLatestNew-title a {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-000);
+  transition: all 0.4s linear;
+  /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
+  /* Medium Devices (Phones, 576px And 677px) = Bootstrap V5 Sm */
+}
+@media screen and (max-width: 575.98px) {
+  .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .ourLatestNew-title a {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 677px) {
+  .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .ourLatestNew-title a {
+    font-size: 16px;
+  }
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .button {
+  position: relative;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.5s linear;
+  overflow: hidden;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .button .icon {
+  z-index: 2;
+  transition: all 0.5s linear;
+  transform: scale(0, 0);
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .button .text {
+  border: none;
+  z-index: 2;
+  position: relative;
+  padding: 1rem;
+  padding-left: 2rem;
+  margin-top: 0;
+  height: max-content;
+  transition: all 0.5s linear;
+  position: absolute;
+  left: -25px;
+  color: var(--color-first);
+  font-weight: bold;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .button:hover .icon {
+  display: block;
+  width: fit-content;
+  transform: scale(1, 1);
+  color: var(--color-fff);
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .button:hover .text {
+  display: block;
+  padding-left: 1rem;
+  left: 10px;
+  z-index: 1;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #02108b;
+  opacity: 0;
+  transition: 0.5s;
+  transform: perspective(400px) rotateX(-90deg);
+  transform-origin: top;
+  border-radius: 6px;
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item:hover > .text .time-comment .comment span {
+  color: var(--color-fff);
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item:hover > .text a {
+  color: var(--color-fff);
+}
+.ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item:hover > .text::before {
+  transform: perspective(400px) rotateX(0deg);
+  opacity: 1;
+  z-index: -1;
+}
