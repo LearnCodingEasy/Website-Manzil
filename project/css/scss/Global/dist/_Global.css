@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Google Font */
 @import url(https://fonts.googleapis.com/css?family=Arimo:regular,500,600,700,italic,500italic,600italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
@@ -10,35 +11,69 @@ Todo ================= VARIABLES CSS ======================
 */
 :root {
   --header-height: 3rem;
-  /*========== Colors ==========*/
-  /* Change favorite color to match images */
-  /*Green dark 33 - Green 171 - Green Blue 200*/
+  /* ========== Colors ========== */
+  /*
+  Hsl 
+  hsl(33, 93%, 54%);
+  1 => Color <=> هي درجة على عجلة الألوان من 0 إلى 360. 0 أحمر ، 120 أخضر ، 240 أزرق
+  2 => Saturation <=> التشبع هو قيمة النسبة المئوية ؛ 0٪ تعني ظل رمادي و 100٪ لون كامل
+  3 => lightness <=> الخفة هي أيضا نسبة ؛ 0٪ أسود ، 100٪ أبيض
+  Hsla 
+  3 => Opacity <=> الشفافية هي درجة على عجلة الألوان من 1 إلى 0
+  hsla(33, 93%, 54%, 0.500);
+   */
   --hue-color: 33;
-  /*  Colors  */
+  /* ========== Colors========== */
   --color-first: hsl(var(--hue-color), 93%, 54%);
-  --color-first-alt: hsla(var(--hue-color), 93%, 54%, 0.725);
-  --color-second: #f9f9f9;
-  --color-second: #f9f9f9;
-  --color-second: #f9f9f9;
-  --color-title: hsl(var(--hue-color), 93%, 54%);
-  --color-text: #707070;
-  --color-text-light: #a6a6a6;
-  --color-body: #fff;
-  --color-container: #ffffff;
-  --color-scrollbar-bg: #707070;
+  --color-first-light: hsla(var(--hue-color), 93%, 54%, 0.725);
+  --color-second: hsl(var(--hue-color), 93%, 54%);
+  --color-second-light: hsla(var(--hue-color), 93%, 54%, 0.725);
+  --color-third: hsl(240, 60%, 17%);
+  --color-third-light: hsla(240, 60%, 60%, 0.795);
+  --color-first-title: hsl(var(--hue-color), 93%, 54%);
+  --color-first-title-light: hsla(var(--hue-color), 93%, 54%, 0.795);
+  --color-second-title: hsl(var(--hue-color), 93%, 100%);
+  --color-second-title-light: hsla(var(--hue-color), 93%, 100%, 0.795);
+  --color-third-title: hsl(var(--hue-color), 93%, 5%);
+  --color-third-title-light: hsla(var(--hue-color), 93%, 5%, 0.795);
+  --color-first-text: hsl(var(--hue-color), 93%, 54%);
+  --color-first-text-light: hsla(var(--hue-color), 25%, 15%, 0.795);
+  --color-second-text: hsl(var(--hue-color), 100%, 100%);
+  --color-second-text-light: hsla(var(--hue-color), 93%, 100%, 0.795);
+  --color-second-text: hsl(var(--hue-color), 100%, 5%);
+  --color-second-text-light: hsla(var(--hue-color), 93%, 15%, 0.795);
+  --color-body: hsl(var(--hue-color), 93%, 100%);
+  --color-container: hsl(var(--hue-color), 93%, 100%);
+  --color-first-section-bg: hsl(var(--hue-color), 93%, 54%);
+  --color-second-section-bg: hsl(var(--hue-color), 93%, 100%);
+  --color-third-section-bg: hsl(var(--hue-color), 93%, 10%);
+  --color-box-first-bg: hsl(var(--hue-color), 93%, 54%);
+  --color-box-second-bg: hsl(var(--hue-color), 93%, 100%);
+  --color-box-third-bg: hsl(var(--hue-color), 93%, 5%);
+  --color-first-button: hsl(var(--hue-color), 93%, 54%);
+  --color-second-button: hsl(var(--hue-color), 93%, 100%);
+  --color-third-button: hsl(var(--hue-color), 93%, 5%);
+  --color-first-icon: hsl(var(--hue-color), 93%, 54%);
+  --color-second-icon: hsl(var(--hue-color), 93%, 100%);
+  --color-third-icon: hsl(var(--hue-color), 93%, 6%);
+  --color-fourth-icon: hsl(var(--hue-color), 5%, 54%);
+  --color-first-border: hsl(var(--hue-color), 93%, 54%);
+  --color-second-border: hsl(var(--hue-color), 93%, 100%);
+  --color-third-border: hsl(var(--hue-color), 93%, 5%);
+  --color-first-overlay: hsla(var(--hue-color), 93%, 54%, 0.725);
+  --color-second-overlay: hsl(var(--hue-color), 93%, 54%);
+  --color-third-overlay: hsl(var(--hue-color), 93%, 5%);
+  --color-scrollbar-bg: hsl(var(--hue-color), 3%, 80%);
   --color-scrollbar-thumb-bg: var(--color-first);
-  --color-button: var(--color-first);
-  --color-selection-bg: var(--color-first);
+  --color-selection: hsl(var(--hue-color), 3%, 90%);
+  --color-selection-bg: hsl(var(--hue-color), 93%, 54%);
   --color-fff: #fff;
   --color-000: #000;
-  --color-section-first-bg: #000;
-  --color-section-second-bg: #000;
-  --color-box-first-bg: #000;
-  --color-box-second-bg: #000;
-  /*  Font => Size, Weight And Typography  */
+  /*  ========== Font => Size, Weight And Typography==========   */
   --font-family-body: "Arimo", sans-serif;
   --font-family-title: "Raleway", sans-serif;
   --font-size-big: 2.25rem;
+  --font-size-bigger: 2.5rem;
   --font-size-h1: 1.5rem;
   --font-size-h2: 1.25rem;
   --font-size-h3: 1rem;
@@ -48,7 +83,7 @@ Todo ================= VARIABLES CSS ======================
   --font-weight-medium: 500;
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
-  /*  Margin  */
+  /* ========== Margin========== */
   --m-0: 0;
   --m-05: 0.5rem;
   --m-1: 1rem;
@@ -56,14 +91,19 @@ Todo ================= VARIABLES CSS ======================
   --m-2: 2rem;
   --m-205: 2.5rem;
   --m-3: 3rem;
-  /*  z index  */
+  /* ========== Z Index========== */
   --z-tooltip: 10;
   --z-fixed: 100;
-  /*  Scrollbar  */
+  /* ========== Scrollbar==========   */
   --scrollbar-width: 1rem;
   --scrollbar-border-radius: 0.25rem;
-  /* Button */
+  /* ========== Button ========== */
   --font-size-button: 18px;
+  /* ========== Hover Overlay ========== */
+  --ele-transition-fast: 0.3s;
+  --ele-transition-normal: 0.4s;
+  --ele-transition-long: 0.9s;
+  --ele-transition-longer: 1.2s;
 }
 
 @media screen and (min-width: 768px) {
@@ -107,12 +147,12 @@ html {
 
 /* For Selection */
 ::-moz-selection {
-  color: #fff;
+  color: var(--color-selection);
   background-color: var(--color-selection-bg);
 }
 
 ::selection {
-  color: #fff;
+  color: var(--color-selection);
   background-color: var(--color-selection-bg);
 }
 
@@ -164,7 +204,7 @@ Todo ================= Body CSS ===========================
 */
 body {
   /* Reset Body Margin*/
-  margin: 0;
+  margin: var(--m-0);
   /* Margin If The Header Is fixed Top And It Is First Element */
   /* margin: var(--header-height) 0 0 0; */
   font-family: var(--font-family-body);
@@ -179,11 +219,13 @@ body {
   }
 }
 
-/* Variables Dark theme */
+/* ========== Variables Dark theme==========  */
 body.dark-theme {
+  --color-body: hsl(var(--hue-color), 93%, 8%);
+  --color-box-first-bg: hsl(var(--hue-color), 93%, 15%);
+  --color-box-second-bg: hsl(var(--hue-color), 93%, 10%);
   --color-title: #f1f3f2;
   --color-text: #f1f3f2;
-  --color-body: #1d2521;
   --color-container: #27302c;
 }
 
@@ -309,27 +351,3 @@ Todo ================= Button =============================
 Todo ================= Box ============================= 
 ===========================================================
 */
-.color {
-  display: block;
-  width: 100%;
-  height: 50px;
-  color: transparent;
-}
-.color.color-first {
-  color: var(--color-first);
-}
-.color.color-first-alt {
-  color: var(--color-first-alt);
-}
-.color.color-second {
-  color: var(--color-second);
-}
-.color.color-title {
-  color: var(--color-title);
-}
-.color.color-text {
-  color: var(--color-text);
-}
-.color.color-text-light {
-  color: var(--color-text-light);
-}

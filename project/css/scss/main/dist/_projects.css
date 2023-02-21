@@ -1,0 +1,122 @@
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-buttons .mixitup-buttons-wrapper .mixitup-buttons-inner {
+  position: relative;
+  padding: 0px 30px;
+  border-radius: 5px;
+  display: inline-block;
+  border: 1px dashed var(--color-first);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-buttons .mixitup-buttons-wrapper .mixitup-buttons-inner .mixitup-button {
+  position: relative;
+  color: var(--color-second-button);
+  padding: 18px 0px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all var(--ele-transition-fast) ease;
+  background-color: var(--color-first-button);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-buttons .mixitup-buttons-wrapper .mixitup-buttons-inner .mixitup-button.mixitup-control-active {
+  border-bottom: var(--color-first);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-buttons .mixitup-buttons-wrapper .mixitup-buttons-inner .mixitup-button.mixitup-control-active::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-buttons .mixitup-buttons-wrapper .mixitup-buttons-inner .mixitup-button::before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  bottom: -1px;
+  height: 4px;
+  width: 100%;
+  opacity: 0;
+  transform: scale(0.5, 1);
+  background-color: var(--color-first);
+  transition: all 300ms ease;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-buttons .mixitup-buttons-wrapper .mixitup-buttons-inner .mixitup-button:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+  background-color: var(--color-first);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items {
+  padding: 5rem 0;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc((100% / 3) - 40px), 1fr));
+  grid-gap: 40px 40px;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item {
+  position: relative;
+  overflow: hidden;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item img {
+  display: block;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item .mixitup-item-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 95%;
+  transform: translate(2.5%, 2.5%);
+  background-color: var(--color-first-overlay);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all var(--ele-transition-long);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item .mixitup-item-description .top {
+  color: var(--color-first-title);
+  padding: 0.6rem 0;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item .mixitup-item-description .bottom {
+  color: var(--color-second-title);
+  font-weight: bold;
+  padding: 0.6rem 0;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item .mixitup-item-description::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  border: 2px solid var(--color-first-border);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item .projects-icon {
+  position: absolute;
+  left: -90px;
+  bottom: 0px;
+  width: 70px;
+  height: 70px;
+  font-size: 24px;
+  color: var(--color-first);
+  line-height: 70px;
+  margin: 0px 3px;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 0px;
+  transition: all 600ms ease;
+  background-color: var(--color-second-icon);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item:hover .mixitup-item-description {
+  transform: rotateY(0deg);
+  backface-visibility: visible;
+  transform: translate(2.5%, 2.5%);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item:hover .projects-icon {
+  left: -3px;
+  transition-delay: 500ms;
+}

@@ -1,5 +1,5 @@
 .ourLatestNew-section {
-  background-color: var(--color-second);
+  background-color: var(--color-first-section-bg);
   padding-top: 5rem;
   padding-bottom: 8rem;
   .ourLatestNew-wrapper {
@@ -7,21 +7,20 @@
       .ourLatestNew-inner {
         .ourLatestNew-text {
           text-align: center;
-          color: var(--color-000);
+          color: var(--color-second-text);
           padding-bottom: 3rem;
           font-size: 6vw;
-          .section-title{
+          .section-title {
             margin-bottom: var(--m-2);
           }
-            .section-subtitle{
-            color: var(--color-000);font-weight: bold;
-            h2{
+          .section-subtitle {
+            color: var(--color-second-text);
+            font-weight: bold;
+            h2 {
               font-size: 36px;
               font-weight: 700;
               line-height: 52px;
-
             }
-            
           }
         }
       }
@@ -56,7 +55,7 @@
             z-index: 2;
             width: 95%;
             margin: auto;
-            background-color: var(--color-fff);
+            background-color: var(--color-box-first-bg);
             position: relative;
             padding: 1rem;
             border-radius: 10px;
@@ -66,10 +65,10 @@
               position: absolute;
               top: -10px;
               left: 30px;
-              background-color: #121247;
+              background-color: var(--color-third);
               padding: 2px 15px;
               border-radius: 10px;
-              color: var(--color-fff);
+              color: var(--color-title);
               font-weight: bold;
               text-transform: uppercase;
               font-size: 12px;
@@ -88,7 +87,7 @@
               .comment {
                 span {
                   padding-right: 0.5rem;
-                  transition: all 0.4s linear;
+                  transition: all var(--ele-transition-normal) linear;
                 }
               }
               /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
@@ -103,13 +102,13 @@
               display: block;
               border-bottom: 3px dotted #999;
               padding: 1.5rem 0;
-              transition: all 0.4s linear;
+              transition: all var(--ele-transition-normal) linear;
 
               a {
                 font-size: 20px;
                 font-weight: bold;
                 color: var(--color-000);
-                transition: all 0.4s linear;
+                transition: all var(--ele-transition-normal) linear;
                 /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
                 @media screen and (max-width: 575.98px) {
                   font-size: 16px;
@@ -127,14 +126,14 @@
               flex-direction: row;
               justify-content: flex-start;
               align-items: center;
-              transition: all 0.5s linear;
+              transition: all var(--ele-transition-normal) linear;
               overflow: hidden;
               .icon {
                 // display: none;
                 // flex-shrink: 0;
                 // width: 0;
                 z-index: 2;
-                transition: all 0.5s linear;
+                transition: all var(--ele-transition-normal) linear;
                 transform: scale(0, 0);
                 i {
                 }
@@ -147,7 +146,7 @@
                 padding-left: 2rem;
                 margin-top: 0;
                 height: max-content;
-                transition: all 0.5s linear;
+                transition: all var(--ele-transition-normal) linear;
                 position: absolute;
                 left: -25px;
                 color: var(--color-first);
@@ -175,9 +174,9 @@
               right: 0;
               bottom: 0;
               top: 0;
-              background-color: #02108b;
+              background-color: var(--color-third);
               opacity: 0;
-              transition: 0.5s;
+              transition: var(--ele-transition-normal);
               transform: perspective(400px) rotateX(-90deg);
               transform-origin: top;
               border-radius: 6px;
@@ -188,12 +187,12 @@
               .time-comment {
                 .comment {
                   span {
-                    color: var(--color-fff);
+                    color: var(--color-title);
                   }
                 }
               }
               a {
-                color: var(--color-fff);
+                color: var(--color-title);
               }
 
               &::before {

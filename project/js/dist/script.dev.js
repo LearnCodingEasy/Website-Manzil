@@ -84,9 +84,9 @@ if (selectedTheme) {
 
 themeButton.addEventListener("click", function () {
   console.log("Yes"); // Add or remove the dark / icon theme
-
-  document.body.classList.toggle(darkTheme);
-  themeButton.classList.toggle(iconTheme); // We save the theme and the current icon that the user chose
+  // document.body.classList.toggle(darkTheme);
+  // themeButton.classList.toggle(iconTheme);
+  // We save the theme and the current icon that the user chose
 
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
@@ -97,6 +97,28 @@ Todo =============== Owl Carousel ===================
 =====================================================
 */
 
+$(document).ready(function () {
+  // owl
+  $(".owl-wrapper .owl-carousel").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    dots: false,
+    autoplay: false,
+    smartSpeed: 1000,
+    responsive: {
+      0: {
+        items: 2
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+});
 $(document).ready(function () {
   // owl
   $(".teamMembers-slider .owl-carousel").owlCarousel({
@@ -125,9 +147,52 @@ Todo =============== mixitup ===================
 =====================================================
 */
 
-var mixer = mixitup(".mixitup-items", {
+var mixer = mixitup(".mixitup-items-inner", {
   animation: {
     duration: 300,
     effectsOut: "fade translateX(-100%)"
   }
+});
+/* 
+=====================================================
+Todo =============== Scroll Reval Animation =========
+=====================================================
+*/
+
+var sr = ScrollReveal({
+  // مسافة
+  distance: "60px",
+  // مدة
+  duration: 2800 // يمكنك القيام بذلك عدة مرات حسب الحاجة
+  // reset: true,
+
+});
+sr.reveal(".projects-section, .footer__rights", {
+  origin: "top",
+  interval: 100
+});
+sr.reveal(".about__data", {
+  origin: "left"
+});
+sr.reveal(".about, .video", {
+  origin: "right",
+  interval: 100
+});
+/*
+=====================================================
+Todo =============== Magnific Popup =================
+=====================================================
+*/
+
+$(document).ready(function () {
+  $(".mixitup-item").magnificPopup({
+    // child items selector, by clicking on it popup will open
+    delegate: "a",
+    type: "image",
+    // other options
+    // For Arrow Left And Right
+    gallery: {
+      enabled: true
+    }
+  });
 });

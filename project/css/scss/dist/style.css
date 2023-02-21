@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Google Font */
 @import url(https://fonts.googleapis.com/css?family=Arimo:regular,500,600,700,italic,500italic,600italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
@@ -10,25 +11,60 @@ Todo ================= VARIABLES CSS ======================
 */
 :root {
   --header-height: 3rem;
-  /*  Colors  */
-  --color-first: #f7941d;
-  --color-first-alt: #f7951db9;
-  --color-second: #f9f9f9;
-  --color-title: #393939;
-  --color-text: #707070;
-  --color-text-light: #a6a6a6;
-  --color-body: #fff;
-  --color-container: #ffffff;
-  --color-scrollbar-bg: #707070;
+  /* ========== Colors ========== */
+  /*
+  Hsl 
+  hsl(33, 93%, 54%);
+  1 => Color <=> هي درجة على عجلة الألوان من 0 إلى 360. 0 أحمر ، 120 أخضر ، 240 أزرق
+  2 => Saturation <=> التشبع هو قيمة النسبة المئوية ؛ 0٪ تعني ظل رمادي و 100٪ لون كامل
+  3 => lightness <=> الخفة هي أيضا نسبة ؛ 0٪ أسود ، 100٪ أبيض
+  Hsla 
+  3 => Opacity <=> الشفافية هي درجة على عجلة الألوان من 1 إلى 0
+  hsla(33, 93%, 54%, 0.500);
+   */
+  --hue-color: 33;
+  /* ========== Colors========== */
+  --color-first: hsl(var(--hue-color), 93%, 54%);
+  --color-first-light: hsla(var(--hue-color), 93%, 54%, 0.725);
+  --color-second: hsl(var(--hue-color), 93%, 54%);
+  --color-second-light: hsla(var(--hue-color), 93%, 54%, 0.725);
+  --color-third: hsl(240, 60%, 17%);
+  --color-third-light: hsla(240, 60%, 60%, 0.795);
+  --color-first-title: hsl(var(--hue-color), 93%, 100%);
+  --color-first-title-light: hsla(var(--hue-color), 93%, 100%, 0.795);
+  --color-second-title: hsl(var(--hue-color), 93%, 5%);
+  --color-second-title-light: hsla(var(--hue-color), 93%, 5%, 0.795);
+  --color-first-text: hsl(var(--hue-color), 25%, 15%);
+  --color-first-text-light: hsla(var(--hue-color), 25%, 15%, 0.795);
+  --color-second-text: hsl(var(--hue-color), 100%, 5%);
+  --color-second-text-light: hsla(var(--hue-color), 25%, 15%, 0.795);
+  --color-body: hsl(var(--hue-color), 93%, 100%);
+  --color-container: hsl(var(--hue-color), 93%, 100%);
+  --color-first-section-bg: hsl(var(--hue-color), 5%, 97%);
+  --color-second-section-bg: #000;
+  --color-box-first-bg: hsl(var(--hue-color), 93%, 100%);
+  --color-box-second-bg: hsl(var(--hue-color), 93%, 95%);
+  --color-first-button: hsl(var(--hue-color), 93%, 100%);
+  --color-second-button: hsl(var(--hue-color), 93%, 5%);
+  --color-first-icon: hsl(var(--hue-color), 93%, 100%);
+  --color-second-icon: hsl(var(--hue-color), 93%, 5%);
+  --color-third-icon: hsl(var(--hue-color), 93%, 54%);
+  --color-scrollbar-bg: hsl(var(--hue-color), 3%, 80%);
   --color-scrollbar-thumb-bg: var(--color-first);
-  --color-button: var(--color-first);
-  --color-selection-bg: var(--color-first);
+  --color-selection: hsl(var(--hue-color), 3%, 90%);
+  --color-selection-bg: hsl(var(--hue-color), 93%, 54%);
   --color-fff: #fff;
   --color-000: #000;
-  --color-000: #000;
-  /*  Font => Size, Weight And Typography  */
+  --color-first-border: hsl(var(--hue-color), 93%, 100%);
+  --color-second-border: #000;
+  --color-third-border: #000;
+  --color-first-overlay: hsla(var(--hue-color), 93%, 54%, 0.725);
+  --color-second-overlay: #000;
+  --color-third-overlay: #000;
+  /*  ========== Font => Size, Weight And Typography==========   */
   --font-family-body: "Arimo", sans-serif;
-  --font-size-biggest: 2.25rem;
+  --font-family-title: "Raleway", sans-serif;
+  --font-size-big: 2.25rem;
   --font-size-h1: 1.5rem;
   --font-size-h2: 1.25rem;
   --font-size-h3: 1rem;
@@ -38,7 +74,7 @@ Todo ================= VARIABLES CSS ======================
   --font-weight-medium: 500;
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
-  /*  Margin  */
+  /* ========== Margin========== */
   --m-0: 0;
   --m-05: 0.5rem;
   --m-1: 1rem;
@@ -46,20 +82,25 @@ Todo ================= VARIABLES CSS ======================
   --m-2: 2rem;
   --m-205: 2.5rem;
   --m-3: 3rem;
-  /*  z index  */
+  /* ========== Z Index========== */
   --z-tooltip: 10;
   --z-fixed: 100;
-  /*  Scrollbar  */
+  /* ========== Scrollbar==========   */
   --scrollbar-width: 1rem;
   --scrollbar-border-radius: 0.25rem;
-  /* Button */
+  /* ========== Button ========== */
   --font-size-button: 18px;
+  /* ========== Hover Overlay ========== */
+  --ele-transition-fast: 0.3s;
+  --ele-transition-normal: 0.4s;
+  --ele-transition-long: 0.9s;
+  --ele-transition-longer: 1.2s;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     /*  Font and typography  */
-    --biggest-font-size: 4rem;
+    --font-size-big: 4rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -97,12 +138,12 @@ html {
 
 /* For Selection */
 ::-moz-selection {
-  color: #fff;
+  color: var(--color-selection);
   background-color: var(--color-selection-bg);
 }
 
 ::selection {
-  color: #fff;
+  color: var(--color-selection);
   background-color: var(--color-selection-bg);
 }
 
@@ -128,6 +169,25 @@ img {
   height: auto;
 }
 
+button,
+input {
+  border: none;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-normal);
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+.main {
+  overflow-x: hidden;
+}
+
 /*
 ===========================================================
 Todo ================= Body CSS =========================== 
@@ -135,7 +195,7 @@ Todo ================= Body CSS ===========================
 */
 body {
   /* Reset Body Margin*/
-  margin: 0;
+  margin: var(--m-0);
   /* Margin If The Header Is fixed Top And It Is First Element */
   /* margin: var(--header-height) 0 0 0; */
   font-family: var(--font-family-body);
@@ -150,11 +210,13 @@ body {
   }
 }
 
-/* Variables Dark theme */
+/* ========== Variables Dark theme==========  */
 body.dark-theme {
+  --color-body: hsl(var(--hue-color), 93%, 8%);
+  --color-box-first-bg: hsl(var(--hue-color), 93%, 15%);
+  --color-box-second-bg: hsl(var(--hue-color), 93%, 10%);
   --color-title: #f1f3f2;
   --color-text: #f1f3f2;
-  --color-body: #1d2521;
   --color-container: #27302c;
 }
 
@@ -275,6 +337,11 @@ Todo ================= Button =============================
   z-index: -1;
 }
 
+/*
+===========================================================
+Todo ================= Box ============================= 
+===========================================================
+*/
 header {
   position: relative;
   width: 100%;
@@ -1138,13 +1205,13 @@ header .header-logo-nav.header-scroll-with-window .container .content .logo .con
 }
 
 .ourLatestNew-section {
-  background-color: var(--color-second);
+  background-color: var(--color-first-section-bg);
   padding-top: 5rem;
   padding-bottom: 8rem;
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-inner .ourLatestNew-text {
   text-align: center;
-  color: var(--color-000);
+  color: var(--color-second-text);
   padding-bottom: 3rem;
   font-size: 6vw;
 }
@@ -1152,7 +1219,7 @@ header .header-logo-nav.header-scroll-with-window .container .content .logo .con
   margin-bottom: var(--m-2);
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-inner .ourLatestNew-text .section-subtitle {
-  color: var(--color-000);
+  color: var(--color-second-text);
   font-weight: bold;
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-inner .ourLatestNew-text .section-subtitle h2 {
@@ -1194,7 +1261,7 @@ header .header-logo-nav.header-scroll-with-window .container .content .logo .con
   z-index: 2;
   width: 95%;
   margin: auto;
-  background-color: var(--color-fff);
+  background-color: var(--color-box-first-bg);
   position: relative;
   padding: 1rem;
   border-radius: 10px;
@@ -1205,10 +1272,10 @@ header .header-logo-nav.header-scroll-with-window .container .content .logo .con
   position: absolute;
   top: -10px;
   left: 30px;
-  background-color: #121247;
+  background-color: var(--color-third);
   padding: 2px 15px;
   border-radius: 10px;
-  color: var(--color-fff);
+  color: var(--color-title);
   font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
@@ -1227,7 +1294,7 @@ header .header-logo-nav.header-scroll-with-window .container .content .logo .con
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .time-comment .comment span {
   padding-right: 0.5rem;
-  transition: all 0.4s linear;
+  transition: all var(--ele-transition-normal) linear;
 }
 @media screen and (min-width: 576px) and (max-width: 677px) {
   .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .time-comment {
@@ -1238,13 +1305,13 @@ header .header-logo-nav.header-scroll-with-window .container .content .logo .con
   display: block;
   border-bottom: 3px dotted #999;
   padding: 1.5rem 0;
-  transition: all 0.4s linear;
+  transition: all var(--ele-transition-normal) linear;
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .ourLatestNew-title a {
   font-size: 20px;
   font-weight: bold;
   color: var(--color-000);
-  transition: all 0.4s linear;
+  transition: all var(--ele-transition-normal) linear;
   /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
   /* Medium Devices (Phones, 576px And 677px) = Bootstrap V5 Sm */
 }
@@ -1265,12 +1332,12 @@ header .header-logo-nav.header-scroll-with-window .container .content .logo .con
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  transition: all 0.5s linear;
+  transition: all var(--ele-transition-normal) linear;
   overflow: hidden;
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .button .icon {
   z-index: 2;
-  transition: all 0.5s linear;
+  transition: all var(--ele-transition-normal) linear;
   transform: scale(0, 0);
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .button .text {
@@ -1281,7 +1348,7 @@ header .header-logo-nav.header-scroll-with-window .container .content .logo .con
   padding-left: 2rem;
   margin-top: 0;
   height: max-content;
-  transition: all 0.5s linear;
+  transition: all var(--ele-transition-normal) linear;
   position: absolute;
   left: -25px;
   color: var(--color-first);
@@ -1306,18 +1373,18 @@ header .header-logo-nav.header-scroll-with-window .container .content .logo .con
   right: 0;
   bottom: 0;
   top: 0;
-  background-color: #02108b;
+  background-color: var(--color-third);
   opacity: 0;
-  transition: 0.5s;
+  transition: var(--ele-transition-normal);
   transform: perspective(400px) rotateX(-90deg);
   transform-origin: top;
   border-radius: 6px;
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item:hover > .text .time-comment .comment span {
-  color: var(--color-fff);
+  color: var(--color-title);
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item:hover > .text a {
-  color: var(--color-fff);
+  color: var(--color-title);
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item:hover > .text::before {
   transform: perspective(400px) rotateX(0deg);
@@ -1482,6 +1549,133 @@ header .header-logo-nav.header-scroll-with-window .container .content .logo .con
 .teamMembers-section .teamMembers-wrapper .container .teamMembers-inner .teamMembers-slider .wrapper .inner .owl-carousel .item:hover .image .wrapper-social li a::after {
   transform: skewY(25deg);
 }
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-buttons .mixitup-buttons-wrapper .mixitup-buttons-inner {
+  position: relative;
+  padding: 0px 30px;
+  border-radius: 5px;
+  display: inline-block;
+  border: 1px dashed var(--color-first);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-buttons .mixitup-buttons-wrapper .mixitup-buttons-inner .mixitup-button {
+  position: relative;
+  color: var(--color-second-button);
+  padding: 18px 0px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all var(--ele-transition-fast) ease;
+  background-color: var(--color-first-button);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-buttons .mixitup-buttons-wrapper .mixitup-buttons-inner .mixitup-button.mixitup-control-active {
+  border-bottom: var(--color-first);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-buttons .mixitup-buttons-wrapper .mixitup-buttons-inner .mixitup-button.mixitup-control-active::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-buttons .mixitup-buttons-wrapper .mixitup-buttons-inner .mixitup-button::before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  bottom: -1px;
+  height: 4px;
+  width: 100%;
+  opacity: 0;
+  transform: scale(0.5, 1);
+  background-color: var(--color-first);
+  transition: all 300ms ease;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-buttons .mixitup-buttons-wrapper .mixitup-buttons-inner .mixitup-button:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+  background-color: var(--color-first);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items {
+  padding: 5rem 0;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc((100% / 3) - 40px), 1fr));
+  grid-gap: 40px 40px;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item {
+  position: relative;
+  overflow: hidden;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item img {
+  display: block;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item .mixitup-item-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 95%;
+  transform: translate(2.5%, 2.5%);
+  background-color: var(--color-first-overlay);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all var(--ele-transition-long);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item .mixitup-item-description .top {
+  color: var(--color-first-title);
+  padding: 0.6rem 0;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item .mixitup-item-description .bottom {
+  color: var(--color-second-title);
+  font-weight: bold;
+  padding: 0.6rem 0;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item .mixitup-item-description::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  border: 2px solid var(--color-first-border);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item .icon {
+  position: absolute;
+  left: -90px;
+  bottom: 0px;
+  width: 70px;
+  height: 70px;
+  font-size: 24px;
+  color: var(--color-first);
+  line-height: 70px;
+  margin: 0px 3px;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 0px;
+  transition: all 600ms ease;
+  background-color: var(--color-second-icon);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item:hover .mixitup-item-description {
+  transform: rotateY(0deg);
+  backface-visibility: visible;
+  transform: translate(2.5%, 2.5%);
+}
+.projects-section .projects-wrapper .container .projects-inner .projects-slider .mixitup-wrapper .mixitup-inner .mixitup-items .mixitup-items-wrapper .mixitup-items-inner .mixitup-item:hover .icon {
+  left: -3px;
+  transition-delay: 500ms;
+}
+
+.testimonials-section .testimonials-wrapper .container .testimonials-inner .testimonials-description p span {
+  color: var(--color-first-text);
+}
+
 .footer {
   background-image: linear-gradient(to bottom, #272627 0%, #000101 100%);
   padding: 3rem 0 0 0;

@@ -1,11 +1,11 @@
 .ourLatestNew-section {
-  background-color: var(--color-second);
+  background-color: var(--color-first-section-bg);
   padding-top: 5rem;
   padding-bottom: 8rem;
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-inner .ourLatestNew-text {
   text-align: center;
-  color: var(--color-000);
+  color: var(--color-second-text);
   padding-bottom: 3rem;
   font-size: 6vw;
 }
@@ -13,7 +13,7 @@
   margin-bottom: var(--m-2);
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-inner .ourLatestNew-text .section-subtitle {
-  color: var(--color-000);
+  color: var(--color-second-text);
   font-weight: bold;
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-inner .ourLatestNew-text .section-subtitle h2 {
@@ -55,7 +55,7 @@
   z-index: 2;
   width: 95%;
   margin: auto;
-  background-color: var(--color-fff);
+  background-color: var(--color-box-first-bg);
   position: relative;
   padding: 1rem;
   border-radius: 10px;
@@ -66,10 +66,10 @@
   position: absolute;
   top: -10px;
   left: 30px;
-  background-color: #121247;
+  background-color: var(--color-third);
   padding: 2px 15px;
   border-radius: 10px;
-  color: var(--color-fff);
+  color: var(--color-title);
   font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
@@ -88,7 +88,7 @@
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .time-comment .comment span {
   padding-right: 0.5rem;
-  transition: all 0.4s linear;
+  transition: all var(--ele-transition-normal) linear;
 }
 @media screen and (min-width: 576px) and (max-width: 677px) {
   .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .time-comment {
@@ -99,13 +99,13 @@
   display: block;
   border-bottom: 3px dotted #999;
   padding: 1.5rem 0;
-  transition: all 0.4s linear;
+  transition: all var(--ele-transition-normal) linear;
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .ourLatestNew-title a {
   font-size: 20px;
   font-weight: bold;
   color: var(--color-000);
-  transition: all 0.4s linear;
+  transition: all var(--ele-transition-normal) linear;
   /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
   /* Medium Devices (Phones, 576px And 677px) = Bootstrap V5 Sm */
 }
@@ -126,12 +126,12 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  transition: all 0.5s linear;
+  transition: all var(--ele-transition-normal) linear;
   overflow: hidden;
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .button .icon {
   z-index: 2;
-  transition: all 0.5s linear;
+  transition: all var(--ele-transition-normal) linear;
   transform: scale(0, 0);
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item > .text .button .text {
@@ -142,7 +142,7 @@
   padding-left: 2rem;
   margin-top: 0;
   height: max-content;
-  transition: all 0.5s linear;
+  transition: all var(--ele-transition-normal) linear;
   position: absolute;
   left: -25px;
   color: var(--color-first);
@@ -167,18 +167,18 @@
   right: 0;
   bottom: 0;
   top: 0;
-  background-color: #02108b;
+  background-color: var(--color-third);
   opacity: 0;
-  transition: 0.5s;
+  transition: var(--ele-transition-normal);
   transform: perspective(400px) rotateX(-90deg);
   transform-origin: top;
   border-radius: 6px;
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item:hover > .text .time-comment .comment span {
-  color: var(--color-fff);
+  color: var(--color-title);
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item:hover > .text a {
-  color: var(--color-fff);
+  color: var(--color-title);
 }
 .ourLatestNew-section .ourLatestNew-wrapper .container .ourLatestNew-slider .item:hover > .text::before {
   transform: perspective(400px) rotateX(0deg);
