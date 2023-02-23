@@ -98,6 +98,7 @@ themeButton.addEventListener("click", () => {
 Todo =============== Owl Carousel ===================
 =====================================================
 */
+/*
 $(document).ready(function () {
   // owl
   $(".owl-wrapper .owl-carousel").owlCarousel({
@@ -142,7 +143,7 @@ $(document).ready(function () {
     },
   });
 });
-
+*/
 /*
 =====================================================
 Todo =============== mixitup ===================
@@ -155,12 +156,12 @@ var mixer = mixitup(".mixitup-items-inner", {
     effectsOut: "fade translateX(-100%)",
   },
 });
-
 /* 
 =====================================================
 Todo =============== Scroll Reval Animation =========
 =====================================================
 */
+
 const sr = ScrollReveal({
   // مسافة
   distance: "60px",
@@ -189,6 +190,7 @@ sr.reveal(`.about, .video`, {
 Todo =============== Magnific Popup =================
 =====================================================
 */
+
 $(document).ready(function () {
   $(".mixitup-item").magnificPopup({
     // child items selector, by clicking on it popup will open
@@ -201,3 +203,104 @@ $(document).ready(function () {
     },
   });
 });
+
+/*
+=====================================================
+Todo =============== Show Nav Menu ==================
+=====================================================
+*/
+
+const showElement = (toggleId, navId, AttributeClassName) => {
+  const toggle = document.getElementById(toggleId);
+  const nav = document.getElementById(navId);
+  // Validate That Variables Exist
+  if (toggle && nav) {
+    // Toggle Class ShowEle Element On Click
+    toggle.addEventListener("click", () => {
+      console.log("Toggle Class ShowEle Element On Click: ");
+      nav.classList.toggle(AttributeClassName);
+    });
+  }
+};
+
+showElement(`nav-toggle`, "nav-menu", "show-menu");
+
+/*
+=====================================================
+Todo ======= Remove Nav Menu  On Click On  Mobile ===
+=====================================================
+*/
+const navLink = document.querySelectorAll(`.nav-link`);
+
+const linkAction = () => {
+  console.log("linkAction: ", linkAction);
+  const navMenu = document.getElementById("nav-menu");
+  // When We Click On Each Nav Link We Remove The Show Menu Class
+  navMenu.classList.remove(`show-menu`);
+};
+
+navLink.forEach((n) => n.addEventListener(`click`, linkAction));
+
+/*
+=====================================================
+Todo ======= When Scroll Section Name Active Link ===
+=====================================================
+*/
+
+const sections = document.querySelectorAll(`section[id]`);
+
+function scrollLinkActive() {
+  sections.forEach((current) => {
+    // Get Scroll Viewport Height
+    let scrollY = window.pageYOffset;
+    console.log("scrollY: ", scrollY);
+
+    // All Section Name
+    let sectionId = current.getAttribute("Id");
+    // console.log("Section Id Name: ", sectionId);
+
+    // Get All Sections Height
+    let sectionHeight = current.offsetHeight;
+    // console.log("Section Height: ", sectionHeight);
+
+    // Size Scroll To Section
+    let sectionTop = current.offsetTop - 50;
+    // console.log("Size Scroll To Section: ", sectionTop);
+
+    //
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(`.nav-menu a[href*=${sectionId}]`)
+        .classList.add(`nav-link-active`);
+    } else {
+      document
+        .querySelector(`.nav-menu a[href*=${sectionId}]`)
+        .classList.remove(`nav-link-active`);
+    }
+  });
+}
+
+window.addEventListener(`scroll`, scrollLinkActive);
+
+/*
+=====================================================
+Todo ======= When Scroll Do Action On Header ========
+=====================================================
+*/
+
+function scrollActionHeader() {
+  const eleHeader = document.getElementById("header");
+  // Get Scroll Viewport Height
+  let scrollY = window.pageYOffset;
+
+  // When The Scroll Is Greater Then 200 Viewport Height, Add Class scroll-action-header
+  let viewportHeight = 200;
+
+  if (scrollY >= viewportHeight) {
+    eleHeader.classList.add(`scroll-action-header`);
+  } else {
+    eleHeader.classList.remove(`scroll-action-header`);
+  }
+  // if(this.scrollY >=viewportHeight){}
+}
+window.addEventListener(`scroll`, scrollActionHeader);

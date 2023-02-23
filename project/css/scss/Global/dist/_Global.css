@@ -30,6 +30,11 @@ Todo ================= VARIABLES CSS ======================
   --color-second-light: hsla(var(--hue-color), 93%, 54%, 0.725);
   --color-third: hsl(240, 60%, 17%);
   --color-third-light: hsla(240, 60%, 60%, 0.795);
+  --color-body: hsl(var(--hue-color), 93%, 100%);
+  --color-container: hsl(var(--hue-color), 93%, 100%);
+  --color-first-header: hsl(var(--hue-color), 93%, 54%);
+  --color-second-header: hsl(var(--hue-color), 93%, 100%);
+  --color-third-header: hsl(var(--hue-color), 93%, 5%);
   --color-first-title: hsl(var(--hue-color), 93%, 54%);
   --color-first-title-light: hsla(var(--hue-color), 93%, 54%, 0.795);
   --color-second-title: hsl(var(--hue-color), 93%, 100%);
@@ -42,14 +47,12 @@ Todo ================= VARIABLES CSS ======================
   --color-second-text-light: hsla(var(--hue-color), 93%, 100%, 0.795);
   --color-second-text: hsl(var(--hue-color), 100%, 5%);
   --color-second-text-light: hsla(var(--hue-color), 93%, 15%, 0.795);
-  --color-body: hsl(var(--hue-color), 93%, 100%);
-  --color-container: hsl(var(--hue-color), 93%, 100%);
   --color-first-section-bg: hsl(var(--hue-color), 93%, 54%);
   --color-second-section-bg: hsl(var(--hue-color), 93%, 100%);
   --color-third-section-bg: hsl(var(--hue-color), 93%, 10%);
-  --color-box-first-bg: hsl(var(--hue-color), 93%, 54%);
-  --color-box-second-bg: hsl(var(--hue-color), 93%, 100%);
-  --color-box-third-bg: hsl(var(--hue-color), 93%, 5%);
+  --color-first-box: hsl(var(--hue-color), 93%, 54%);
+  --color-second-box: hsl(var(--hue-color), 93%, 100%);
+  --color-third-box: hsl(var(--hue-color), 93%, 5%);
   --color-first-button: hsl(var(--hue-color), 93%, 54%);
   --color-second-button: hsl(var(--hue-color), 93%, 100%);
   --color-third-button: hsl(var(--hue-color), 93%, 5%);
@@ -83,6 +86,7 @@ Todo ================= VARIABLES CSS ======================
   --font-weight-medium: 500;
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
+  --font-size-button: 18px;
   /* ========== Margin========== */
   --m-0: 0;
   --m-05: 0.5rem;
@@ -97,8 +101,6 @@ Todo ================= VARIABLES CSS ======================
   /* ========== Scrollbar==========   */
   --scrollbar-width: 1rem;
   --scrollbar-border-radius: 0.25rem;
-  /* ========== Button ========== */
-  --font-size-button: 18px;
   /* ========== Hover Overlay ========== */
   --ele-transition-fast: 0.3s;
   --ele-transition-normal: 0.4s;
@@ -300,6 +302,58 @@ Todo ================= Header =============================
 */
 .header {
   /* If You Use Header To Be Fixed Element */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-fixed);
+  background-color: var(--color-first-header);
+}
+.header .nav {
+  max-width: 1024px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav .nav-log {
+  color: var(--color-second-header);
+  font-weight: var(--font-weight-medium);
+}
+.header .nav .nav-menu .nav-list .nav-item {
+  margin-bottom: var(--m-2);
+}
+.header .nav .nav-menu .nav-list .nav-item .nav-link {
+  color: var(--color-second-header);
+  font-weight: var(--font-weight-medium);
+  transition: 0.3s;
+}
+.header .nav .nav-menu .nav-list .nav-item .nav-link:hover {
+  color: var(--color-third-header);
+}
+@media screen and (max-width: 768px) {
+  .header .nav .nav-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+    background-color: var(--color-first-header);
+    transition: 0.4s;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: var(--z-fixed);
+  }
+}
+.header .nav .nav-toggle {
+  color: var(--color-second-header);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h3);
+  cursor: pointer;
+}
+.header .nav .showEle {
+  top: var(--header-height);
 }
 
 /*

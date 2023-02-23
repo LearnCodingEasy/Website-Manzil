@@ -1,0 +1,133 @@
+.about-section {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: block;
+  height: inherit;
+}
+.about-section .about-wrapper {
+  padding: 6rem 0;
+}
+.about-section .about-wrapper .container .about-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+  grid-gap: 2.5% 5%;
+  /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
+  /* Medium Devices (Phones, 576px And 677px) = Bootstrap V5 Sm */
+  /* Large Devices (Phones, 678px And 767px) */
+}
+@media screen and (max-width: 575.98px) {
+  .about-section .about-wrapper .container .about-inner {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 677px) {
+  .about-section .about-wrapper .container .about-inner {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+@media screen and (min-width: 678px) and (max-width: 767px) {
+  .about-section .about-wrapper .container .about-inner {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+.about-section .about-wrapper .container .about-inner .about-image {
+  position: relative;
+}
+.about-section .about-wrapper .container .about-inner .about-image .content-image {
+  position: relative;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.about-section .about-wrapper .container .about-inner .about-image .content-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #222222e3;
+  height: 100px;
+  z-index: -1;
+  display: block;
+  width: 70%;
+}
+.about-section .about-wrapper .container .about-inner .about-image .content-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #222222e3;
+  height: 200px;
+  z-index: -1;
+  display: block;
+  width: 40%;
+}
+.about-section .about-wrapper .container .about-inner .about-image .content-image .icon-play {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-first-icon);
+  z-index: 2;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-section .about-wrapper .container .about-inner .about-image .content-image .icon-play i {
+  font-size: var(--font-size-h2);
+  color: var(--color-second-icon);
+}
+.about-section .about-wrapper .container .about-inner .about-text .section-title {
+  color: var(--color-000);
+  font-size: 20px;
+}
+.about-section .about-wrapper .container .about-inner .about-text .section-title h2 {
+  color: var(--color-000);
+  margin: 0;
+}
+.about-section .about-wrapper .container .about-inner .about-text .section-subtitle {
+  color: var(--color-000);
+  font-size: 4vh;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+.about-section .about-wrapper .container .about-inner .about-text .section-subtitle h2 {
+  margin: 0;
+}
+.about-section .about-wrapper .container .about-inner .about-text .lead {
+  color: var(--color-first-text);
+  padding: 0.5em 0;
+}
+.about-section .about-wrapper .container .about-inner .about-text .about-description {
+  color: var(--color-third-text);
+  font-size: var(--font-size-normal);
+}
+.about-section .about-wrapper .container .about-inner .about-text .first-button {
+  margin: 2rem 0;
+}
+.about-section .about-wrapper .container .about-inner .about-text .about-counter {
+  position: relative;
+}
+.about-section .about-wrapper .container .about-inner .about-text .about-counter .inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-section .about-wrapper .container .about-inner .about-text .about-counter .inner .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-section .about-wrapper .container .about-inner .about-text .about-counter .inner .item .text {
+  flex-grow: 1;
+}
+.about-section .about-wrapper .container .about-inner .about-text .about-counter .inner .item .text .number {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+}
+.about-section .about-wrapper .container .about-inner .about-text .about-counter .inner .item .text .words {
+  font-size: var(--font-size-normal);
+}

@@ -97,6 +97,7 @@ Todo =============== Owl Carousel ===================
 =====================================================
 */
 
+/*
 $(document).ready(function () {
   // owl
   $(".owl-wrapper .owl-carousel").owlCarousel({
@@ -108,15 +109,15 @@ $(document).ready(function () {
     smartSpeed: 1000,
     responsive: {
       0: {
-        items: 2
+        items: 2,
       },
       600: {
-        items: 2
+        items: 2,
       },
       1000: {
-        items: 3
-      }
-    }
+        items: 3,
+      },
+    },
   });
 });
 $(document).ready(function () {
@@ -130,17 +131,19 @@ $(document).ready(function () {
     smartSpeed: 1000,
     responsive: {
       0: {
-        items: 2
+        items: 2,
       },
       600: {
-        items: 2
+        items: 2,
       },
       1000: {
-        items: 3
-      }
-    }
+        items: 3,
+      },
+    },
   });
 });
+*/
+
 /*
 =====================================================
 Todo =============== mixitup ===================
@@ -196,3 +199,95 @@ $(document).ready(function () {
     }
   });
 });
+/*
+=====================================================
+Todo =============== Show Nav Menu ==================
+=====================================================
+*/
+
+var showElement = function showElement(toggleId, navId, AttributeClassName) {
+  var toggle = document.getElementById(toggleId);
+  var nav = document.getElementById(navId); // Validate That Variables Exist
+
+  if (toggle && nav) {
+    // Toggle Class ShowEle Element On Click
+    toggle.addEventListener("click", function () {
+      console.log("Toggle Class ShowEle Element On Click: ");
+      nav.classList.toggle(AttributeClassName);
+    });
+  }
+};
+
+showElement("nav-toggle", "nav-menu", "show-menu");
+/*
+=====================================================
+Todo ======= Remove Nav Menu  On Click On  Mobile ===
+=====================================================
+*/
+
+var navLink = document.querySelectorAll(".nav-link");
+
+var linkAction = function linkAction() {
+  console.log("linkAction: ", linkAction);
+  var navMenu = document.getElementById("nav-menu"); // When We Click On Each Nav Link We Remove The Show Menu Class
+
+  navMenu.classList.remove("show-menu");
+};
+
+navLink.forEach(function (n) {
+  return n.addEventListener("click", linkAction);
+});
+/*
+=====================================================
+Todo ======= When Scroll Section Name Active Link ===
+=====================================================
+*/
+
+var sections = document.querySelectorAll("section[id]");
+
+function scrollLinkActive() {
+  sections.forEach(function (current) {
+    // Get Scroll Viewport Height
+    var scrollY = window.pageYOffset;
+    console.log("scrollY: ", scrollY); // All Section Name
+
+    var sectionId = current.getAttribute("Id"); // console.log("Section Id Name: ", sectionId);
+    // Get All Sections Height
+
+    var sectionHeight = current.offsetHeight; // console.log("Section Height: ", sectionHeight);
+    // Size Scroll To Section
+
+    var sectionTop = current.offsetTop - 50; // console.log("Size Scroll To Section: ", sectionTop);
+    //
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector(".nav-menu a[href*=".concat(sectionId, "]")).classList.add("nav-link-active");
+    } else {
+      document.querySelector(".nav-menu a[href*=".concat(sectionId, "]")).classList.remove("nav-link-active");
+    }
+  });
+}
+
+window.addEventListener("scroll", scrollLinkActive);
+/*
+=====================================================
+Todo ======= When Scroll Do Action On Header ========
+=====================================================
+*/
+
+function scrollActionHeader() {
+  var eleHeader = document.getElementById("header"); // Get Scroll Viewport Height
+
+  var scrollY = window.pageYOffset; // When The Scroll Is Greater Then 200 Viewport Height, Add Class scroll-action-header
+
+  var viewportHeight = 200;
+
+  if (scrollY >= viewportHeight) {
+    eleHeader.classList.add("scroll-action-header");
+  } else {
+    eleHeader.classList.remove("scroll-action-header");
+  } // if(this.scrollY >=viewportHeight){}
+
+}
+
+window.addEventListener("scroll", scrollActionHeader);

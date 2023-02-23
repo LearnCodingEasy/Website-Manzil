@@ -37,6 +37,16 @@ Todo ================= VARIABLES CSS ======================
   --color-second-light: hsla(var(--hue-color), 93%, 54%, 0.725);
   --color-third: hsl(240, 60%, 17%);
   --color-third-light: hsla(240, 60%, 60%, 0.795);
+  // Body
+  --color-body: hsl(var(--hue-color), 93%, 100%);
+  --color-container: hsl(var(--hue-color), 93%, 100%);
+  // Header
+  // hsl(33, 93%, 54%)
+  --color-first-header: hsl(var(--hue-color), 93%, 54%);
+  // White
+  --color-second-header: hsl(var(--hue-color), 93%, 100%);
+  // Black
+  --color-third-header: hsl(var(--hue-color), 93%, 5%);
   // Text
   // Title
   // hsl(33, 93%, 54%)
@@ -58,9 +68,6 @@ Todo ================= VARIABLES CSS ======================
   // Black
   --color-second-text: hsl(var(--hue-color), 100%, 5%);
   --color-second-text-light: hsla(var(--hue-color), 93%, 15%, 0.795);
-  // Body
-  --color-body: hsl(var(--hue-color), 93%, 100%);
-  --color-container: hsl(var(--hue-color), 93%, 100%);
   // Section
   // hsl(33, 93%, 54%)
   --color-first-section-bg: hsl(var(--hue-color), 93%, 54%);
@@ -70,11 +77,11 @@ Todo ================= VARIABLES CSS ======================
   --color-third-section-bg: hsl(var(--hue-color), 93%, 10%);
   // Box
   // hsl(33, 93%, 54%)
-  --color-box-first-bg: hsl(var(--hue-color), 93%, 54%);
+  --color-first-box: hsl(var(--hue-color), 93%, 54%);
   // White
-  --color-box-second-bg: hsl(var(--hue-color), 93%, 100%);
+  --color-second-box: hsl(var(--hue-color), 93%, 100%);
   // Black
-  --color-box-third-bg: hsl(var(--hue-color), 93%, 5%);
+  --color-third-box: hsl(var(--hue-color), 93%, 5%);
   // Button
   // hsl(33, 93%, 54%)
   --color-first-button: hsl(var(--hue-color), 93%, 54%);
@@ -112,6 +119,7 @@ Todo ================= VARIABLES CSS ======================
   --color-selection-bg: hsl(var(--hue-color), 93%, 54%);
   --color-fff: #fff;
   --color-000: #000;
+
   /*  ========== Font => Size, Weight And Typography==========   */
   --font-family-body: "Arimo", sans-serif;
   --font-family-title: "Raleway", sans-serif;
@@ -126,6 +134,8 @@ Todo ================= VARIABLES CSS ======================
   --font-weight-medium: 500;
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
+  // Button
+  --font-size-button: 18px;
 
   /* ========== Margin========== */
   --m-0: 0;
@@ -143,9 +153,6 @@ Todo ================= VARIABLES CSS ======================
   /* ========== Scrollbar==========   */
   --scrollbar-width: 1rem;
   --scrollbar-border-radius: 0.25rem;
-
-  /* ========== Button ========== */
-  --font-size-button: 18px;
 
   /* ========== Hover Overlay ========== */
   --ele-transition-fast: 0.3s;
@@ -343,12 +350,71 @@ Todo ================= Header =============================
 // If You Use Header To Be Fixed Element
 .header {
   /* If You Use Header To Be Fixed Element */
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // z-index: var(--z-fixed);
-  // background-color: var(--color-body);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-fixed);
+  background-color: var(--color-first-header);
+  .nav {
+    max-width: 1024px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // A
+    .nav-log {
+      color: var(--color-second-header);
+      font-weight: var(--font-weight-medium);
+      // If It Image
+      img {
+      }
+    }
+    // Div
+    .nav-menu {
+      // Ul
+      .nav-list {
+        // Li
+        .nav-item {
+          margin-bottom: var(--m-2);
+          // A
+          .nav-link {
+            color: var(--color-second-header);
+            font-weight: var(--font-weight-medium);
+            transition: 0.3s;
+            &:hover {
+              color: var(--color-third-header);
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 768px) {
+        position: fixed;
+        // If
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        background-color: var(--color-first-header);
+        transition: 0.4s;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 1rem 1rem;
+        z-index: var(--z-fixed);
+      }
+    }
+    .nav-toggle {
+      color: var(--color-second-header);
+      font-weight: var(--font-weight-medium);
+      font-size: var(--font-size-h3);
+      cursor: pointer;
+      a {
+      }
+    }
+    .showEle {
+      top: var(--header-height);
+    }
+  }
 }
 
 /*

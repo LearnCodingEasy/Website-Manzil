@@ -29,6 +29,147 @@
         }
         // Owl Section Slider
         .testimonials-slider {
+          .owl-wrapper {
+            position: relative;
+            padding: 3rem 0;
+            .owl-carousel {
+              &.owl-theme {
+                // Inner
+                .owl-stage-outer {
+                  padding: 1rem 0 3rem 0;
+                  .owl-stage {
+                    // All Items
+                    .owl-item {
+                      // Element Hide
+                      &.cloned {
+                      }
+                      // Element Show
+                      &.active {
+                        .item {
+                          background-image: linear-gradient(
+                            to bottom,
+                            #1b1a1a 0%,
+                            #222 100%
+                          );
+                          // height: 400px;
+                          margin-bottom: 40px;
+                          .inner {
+                            // height: 500px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            flex-direction: column;
+                            // padding: 5rem 1rem 1rem 1rem;
+                            padding: 2rem 1rem;
+                            // border: 3px solid var(--color-first);
+                            border-radius: 20px;
+                            // overflow: hidden;
+                            // height: 100%;
+                            border: 3px solid var(--color-first);
+                            .icon {
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: space-between;
+                              align-items: center;
+                              // height: 100px;
+                              .icon-quote {
+                                padding-bottom: 2rem;
+                                i {
+                                  color: var(--color-fourth-icon);
+                                  font-size: var(--font-size-h1);
+                                }
+                              }
+                              .icon-start {
+                                padding-bottom: 2rem;
+                                i {
+                                  color: var(--color-first-icon);
+                                }
+                              }
+                            }
+                            .text {
+                              text-align: center;
+                              padding-bottom: 2rem;
+                              .description {
+                                padding-bottom: 2rem;
+                                color: var(--color-second-title);
+                                p {
+                                  font-size: var(--font-size-h3);
+                                }
+                              }
+                              .author-name {
+                                padding-bottom: 1rem;
+                                color: var(--color-first);
+                              }
+                            }
+                            .image {
+                              position: absolute;
+                              // display: block;
+                              bottom: -10px;
+                              .author-image {
+                                border: 5px solid var(--color-first);
+                                border-radius: 50%;
+                                // overflow: hidden;
+                                // position: absolute;
+                                bottom: 0px;
+                                // bottom: -50px;
+                                z-index: 100;
+                                display: block;
+                                // margin-bottom: -100px;
+                                img {
+                                  border-radius: 50%;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                // Arrow
+                .owl-nav {
+                  position: absolute;
+                  top: -100px;
+                  right: 10px;
+                  width: 150px;
+                  border: 2px solid rgba(5, 5, 5, 0.021);
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  .owl-prev,
+                  .owl-next {
+                    color: var(--color-first-icon);
+                    display: block;
+                    position: relative;
+                    border: 2px solid var(--color-second-border);
+                    width: 100%;
+                    transition: all var(--ele-transition-normal) ease;
+                    span {
+                      font-size: 40px;
+                    }
+                    &:hover {
+                      background-color: var(--color-first-icon);
+                      color: var(--color-second-icon);
+                      border-radius: 50%;
+                    }
+                  }
+                  .owl-next {
+                  }
+                  .owl-prev {
+                  }
+                  &.disabled {
+                    // display: block !important;
+                  }
+                }
+                // Dots
+                .owl-dots {
+                  &.disabled {
+                    // display: block !important;
+                  }
+                }
+              }
+            }
+          }
         }
         // Section Description
         .testimonials-description {
@@ -37,148 +178,6 @@
               color: var(--color-first-text);
             }
           }
-        }
-      }
-    }
-  }
-}
-
-.owl-wrapper {
-  position: relative;
-  padding: 3rem 0;
-  .owl-carousel {
-    &.owl-theme {
-      // Inner
-      .owl-stage-outer {
-        padding: 1rem 0 3rem 0;
-        .owl-stage {
-          // All Items
-          .owl-item {
-            // Element Hide
-            &.cloned {
-            }
-            // Element Show
-            &.active {
-              .item {
-                background-image: linear-gradient(
-                  to bottom,
-                  #1b1a1a 0%,
-                  #222 100%
-                );
-                // height: 400px;
-                margin-bottom: 40px;
-                .inner {
-                  // height: 500px;
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  flex-direction: column;
-                  // padding: 5rem 1rem 1rem 1rem;
-                  padding: 2rem 1rem;
-                  // border: 3px solid var(--color-first);
-                  border-radius: 20px;
-                  // overflow: hidden;
-                  // height: 100%;
-                  border: 3px solid var(--color-first);
-                  .icon {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
-                    // height: 100px;
-                    .icon-quote {
-                      padding-bottom: 2rem;
-                      i {
-                        color: var(--color-fourth-icon);
-                        font-size: var(--font-size-h1);
-                      }
-                    }
-                    .icon-start {
-                      padding-bottom: 2rem;
-                      i {
-                        color: var(--color-first-icon);
-                      }
-                    }
-                  }
-                  .text {
-                    text-align: center;
-                    padding-bottom: 2rem;
-                    .description {
-                      padding-bottom: 2rem;
-                      color: var(--color-second-title);
-                      p {
-                        font-size: var(--font-size-h3);
-                      }
-                    }
-                    .author-name {
-                      padding-bottom: 1rem;
-                      color: var(--color-first);
-                    }
-                  }
-                  .image {
-                    position: absolute;
-                    // display: block;
-                    bottom: -10px;
-                    .author-image {
-                      border: 5px solid var(--color-first);
-                      border-radius: 50%;
-                      // overflow: hidden;
-                      // position: absolute;
-                      bottom: 0px;
-                      // bottom: -50px;
-                      z-index: 100;
-                      display: block;
-                      // margin-bottom: -100px;
-                      img {
-                        border-radius: 50%;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      // Arrow
-      .owl-nav {
-        position: absolute;
-        top: -100px;
-        right: 10px;
-        width: 150px;
-        border: 2px solid rgba(5, 5, 5, 0.021);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        .owl-prev,
-        .owl-next {
-          color: var(--color-first-icon);
-          display: block;
-          position: relative;
-          border: 2px solid var(--color-second-border);
-          width: 100%;
-          transition: all var(--ele-transition-normal) ease;
-          span {
-            font-size: 40px;
-          }
-          &:hover {
-            background-color: var(--color-first-icon);
-            color: var(--color-second-icon);
-            border-radius: 50%;
-          }
-        }
-        .owl-next {
-        }
-        .owl-prev {
-        }
-        &.disabled {
-          // display: block !important;
-        }
-      }
-      // Dots
-      .owl-dots {
-        &.disabled {
-          // display: block !important;
         }
       }
     }

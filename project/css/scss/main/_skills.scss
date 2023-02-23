@@ -1,0 +1,119 @@
+.skills-section {
+  background-image: url("https://wp1.yogsthemes.com/demo/manzil/wp-content/uploads/2020/07/2.jpg");
+
+  .skills-wrapper {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 414px;
+      left: 0;
+      bottom: 0;
+      background-image: url("https://wp1.yogsthemes.com/demo/manzil/wp-content/uploads/2020/07/pattern-2.png");
+      background-repeat: repeat-x;
+      background-position: left bottom;
+      animation-name: background-move;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate;
+    }
+    .container {
+      .skills-inner {
+        .skills-text {
+          .section-title {
+            h2 {
+            }
+          }
+          .section-subtitle {
+            h2 {
+            }
+          }
+        }
+        .skills-image {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          overflow: hidden;
+          .text {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+            grid-gap: 5% 3%;
+            flex-grow: 1;
+            .item {
+              // display: flex;
+              position: relative;
+              // width: 100px;
+              // height: 100%;
+              // position: relative;
+              // padding-left: 40px;
+              // margin: 0px 20px 0px;
+              // display: inline-block;
+              // width: 100%;
+              //
+              // display: grid;
+              // grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+              // grid-gap: 5% 3%;
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .text-content {
+                position: absolute;
+                width: 380px;
+                font-size: 18px;
+                line-height: 24px;
+                color: #222222;
+                font-weight: 700;
+                // padding-bottom: 7px;
+                left: -20px;
+                bottom: 0px;
+                // display: block;
+                text-transform: capitalize;
+                transform: rotate(-90deg);
+                transform-origin: 0% 0%;
+                // font-family: "Arimo", sans-serif;
+                top: 70%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .content {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .line-number {
+                .line {
+                  position: relative;
+                  background-color: var(--color-000);
+                  height: 350px;
+                  width: 40px;
+                  height: 400px;
+                  width: 40px;
+                  .number {
+                  }
+                }
+              }
+            }
+          }
+          .img {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes background-move {
+  0% {
+    background-position: left bottom;
+  }
+
+  to {
+    background-position: right bottom;
+  }
+}
