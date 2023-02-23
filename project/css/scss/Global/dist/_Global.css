@@ -302,12 +302,10 @@ Todo ================= Header =============================
 */
 .header {
   /* If You Use Header To Be Fixed Element */
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: var(--z-fixed);
-  background-color: var(--color-first-header);
 }
 .header .nav {
   max-width: 1024px;

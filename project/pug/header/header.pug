@@ -182,25 +182,138 @@ header(class="header" id="header")
           i(class="fas fa-moon change-theme-icon" id="change-theme-icon")
 
 
-  nav(class="nav db-container" style="display: none")
-    a(href="#" class="nav-log") Logo 
+  nav(class="nav")
+    // Logo
+    a(href="#" class="nav-log") 
+      img(src="images/logo.webp" alt="alt") 
+    // Menu
     div(class="nav-menu" id="nav-menu") 
       ul(class="nav-list")
+        // Home
         li(class="nav-item")
-          a(href="#home" class="nav-link" ) Home
+          a(href="#home" class="nav-link  nav-active-link" ) Home
+            span(class="icon")
+              i(class="fas fa-chevron-down")
+          ul(class="submenu")
+            li 
+              a(href="#") Home One
+            li 
+              a(href="#") Home Tow
+            li 
+              a(href="#") Home Three
+            li 
+              a(href="#") Home Four
+
+        // About Us
         li(class="nav-item")
-          a(href="#about" class="nav-link" ) about
+          a(href="#about" class="nav-link" ) about us
+            span(class="icon")
+              i(class="fas fa-chevron-down")
+          ul(class="submenu")
+            li 
+              a(href="#") About Us
+            li 
+              a(href="#") Faq’s
+            li 
+              a(href="#") Price
+            li 
+              a(href="#") Our Team
+            li 
+              a(href="#") Testimonial
+            li 
+              a(href="#") Coming Soon
+            li 
+              a(href="#") Terms & Condition
+            li 
+              a(href="#") Privacy & Policy
+
+        // Services
         li(class="nav-item")
           a(href="#services" class="nav-link" ) Services
+            span(class="icon")
+              i(class="fas fa-chevron-down")
+          ul(class="submenu")
+            li 
+              a(href="#") Services
+            li 
+              a(href="#") Building Construction
+            li 
+              a(href="#") Property Sketching
+            li 
+              a(href="#") Building Renovation
+            li 
+              a(href="#") Material Supply
+            li 
+              a(href="#") Interior Design
+            li 
+              a(href="#") Plan Certification
+            li 
+              a(href="#") Spectial Monintation
+
+        // Projects
         li(class="nav-item")
-          a(href="#skills" class="nav-link" ) Skills
-        li(class="nav-item")
-          a(href="#testimonials" class="nav-link" ) Testimonials
+          a(href="#projects" class="nav-link" ) projects
+            span(class="icon")
+              i(class="fas fa-chevron-down")
+          ul(class="submenu")
+            li 
+              a(href="#") Our Projects 
+            li 
+              a(href="#") Projects Two
+            li 
+              a(href="#") Projects Detail
+            li 
+              a(href="#") Projects Detail 02
+
+        // Blog
         li(class="nav-item")
           a(href="#blog" class="nav-link" ) blog
+            span(class="icon")
+              i(class="fas fa-chevron-down")
+          ul(class="submenu")
+            li 
+              a(href="#") Blog Classic
+            li 
+              a(href="#") Blog Left Sidebar
+            li 
+              a(href="#") Blog Right Sidebar
+            li 
+              a(href="#") Blog Details
+            li 
+              a(href="#") Error Page
+
+        // Shop
+        li(class="nav-item")
+          a(href="#shop" class="nav-link" ) shop
+            span(class="icon")
+              i(class="fas fa-chevron-down")
+          ul(class="submenu")
+            li 
+              a(href="#") Shop
+            li 
+              a(href="#") Shop Details
+            li 
+              a(href="#") Cart Page
+            li 
+              a(href="#") Checkout Page
+            li 
+              a(href="#") My account
+
+
         li(class="nav-item")
           a(href="#contact" class="nav-link" ) Contact
-
+            span(class="icon")
+              i(class="fas fa-chevron-down")
+          ul(class="submenu")
+            li 
+              a(href="#") Contact Us 01
+            li 
+              a(href="#") Contact Us 02
+            li 
+              a(href="#") Contact Us 03
+    // Search & Form & Button
+    div(class="nav-search nav-form nav-button")
+      div(class="")
     div(class="nav-toggle" id="nav-toggle")
-      i(class="fab fa-skype skype-icon")
+      i(class="fas fa-moon skype-icon")
 

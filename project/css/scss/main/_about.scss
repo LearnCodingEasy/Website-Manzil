@@ -7,6 +7,26 @@
 
   .about-wrapper {
     padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    &:after {
+      position: absolute;
+      content: "";
+      left: 0px;
+      bottom: 90%;
+      z-index: -1;
+      border-bottom: 1000px solid #222222;
+      border-left: 1800px solid transparent;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 130px;
+      box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+    }
     .container {
       .about-inner {
         display: grid;
@@ -24,7 +44,16 @@
         @media screen and (min-width: 678px) and (max-width: 767px) {
           grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
         }
-
+        position: relative;
+        &:before {
+          position: absolute;
+          content: "";
+          left: 0px;
+          top: 0px;
+          right: 0px;
+          bottom: 130px;
+          box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+        }
         .about-image {
           position: relative;
           .content-image {

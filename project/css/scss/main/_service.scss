@@ -1,8 +1,40 @@
 .service-section {
   .service-wrapper {
+    // Start Copy
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background-image: url(../images/1.webp);
+      background-position: center center;
+      background-size: contain;
+      background-repeat: repeat;
+      z-index: -1;
+    }
+    // End Copy
     .container {
       .service-inner {
+        padding: 5rem 0;
         .service-text {
+          text-align: center;
+          padding: 2rem 0;
+          .section-title,
+          .service-subtitle {
+            h2,
+            p {
+              color: var(--color-fff);
+            }
+            p {
+              font-size: var(--font-size-h1);
+              width: 75%;
+              margin: auto;
+              text-transform: capitalize;
+              font-weight: var(--font-weight-bold);
+            }
+          }
         }
         .service-slider {
           .owl-wrapper {
@@ -63,11 +95,15 @@
                             flex-direction: column;
                             border-radius: 10px;
                             align-items: center;
-                            background-color: var(--color-first-light);
+                            background-color: var(--color-first-box);
                             padding: 2rem 1rem;
                             .icon {
+                              padding: 1.5rem;
+                              border-radius: 50%;
+                              background-color: var(--color-second-icon);
                               i {
                                 font-size: var(--font-size-bigger);
+                                background-color: var(--color-third-icon);
                               }
                             }
                             .text {

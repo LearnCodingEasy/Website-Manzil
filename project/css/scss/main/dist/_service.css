@@ -1,3 +1,39 @@
+.service-section .service-wrapper {
+  position: relative;
+}
+.service-section .service-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url(../images/1.webp);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: repeat;
+  z-index: -1;
+}
+.service-section .service-wrapper .container .service-inner {
+  padding: 5rem 0;
+}
+.service-section .service-wrapper .container .service-inner .service-text {
+  text-align: center;
+  padding: 2rem 0;
+}
+.service-section .service-wrapper .container .service-inner .service-text .section-title h2,
+.service-section .service-wrapper .container .service-inner .service-text .section-title p,
+.service-section .service-wrapper .container .service-inner .service-text .service-subtitle h2,
+.service-section .service-wrapper .container .service-inner .service-text .service-subtitle p {
+  color: var(--color-fff);
+}
+.service-section .service-wrapper .container .service-inner .service-text .section-title p,
+.service-section .service-wrapper .container .service-inner .service-text .service-subtitle p {
+  font-size: var(--font-size-h1);
+  width: 75%;
+  margin: auto;
+  text-transform: capitalize;
+  font-weight: var(--font-weight-bold);
+}
 .service-section .service-wrapper .container .service-inner .service-slider .owl-wrapper {
   position: relative;
   width: 100%;
@@ -46,11 +82,17 @@
   flex-direction: column;
   border-radius: 10px;
   align-items: center;
-  background-color: var(--color-first-light);
+  background-color: var(--color-first-box);
   padding: 2rem 1rem;
+}
+.service-section .service-wrapper .container .service-inner .service-slider .owl-wrapper .owl-carousel.owl-theme .owl-stage-outer .owl-stage .owl-item.active .item .lower .icon {
+  padding: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--color-second-icon);
 }
 .service-section .service-wrapper .container .service-inner .service-slider .owl-wrapper .owl-carousel.owl-theme .owl-stage-outer .owl-stage .owl-item.active .item .lower .icon i {
   font-size: var(--font-size-bigger);
+  background-color: var(--color-third-icon);
 }
 .service-section .service-wrapper .container .service-inner .service-slider .owl-wrapper .owl-carousel.owl-theme .owl-stage-outer .owl-stage .owl-item.active .item .lower .text p {
   color: var(--color-second-text);

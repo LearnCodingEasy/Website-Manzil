@@ -7,6 +7,26 @@
 }
 .about-section .about-wrapper {
   padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.about-section .about-wrapper:after {
+  position: absolute;
+  content: "";
+  left: 0px;
+  bottom: 90%;
+  z-index: -1;
+  border-bottom: 1000px solid #222222;
+  border-left: 1800px solid transparent;
+}
+.about-section .about-wrapper:before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 130px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 .about-section .about-wrapper .container .about-inner {
   display: grid;
@@ -15,6 +35,7 @@
   /* Small Devices (Phones, Less Than 575.98px) = Bootstrap V5 Xs */
   /* Medium Devices (Phones, 576px And 677px) = Bootstrap V5 Sm */
   /* Large Devices (Phones, 678px And 767px) */
+  position: relative;
 }
 @media screen and (max-width: 575.98px) {
   .about-section .about-wrapper .container .about-inner {
@@ -30,6 +51,15 @@
   .about-section .about-wrapper .container .about-inner {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   }
+}
+.about-section .about-wrapper .container .about-inner:before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 130px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 .about-section .about-wrapper .container .about-inner .about-image {
   position: relative;

@@ -98,7 +98,7 @@ themeButton.addEventListener("click", () => {
 Todo =============== Owl Carousel ===================
 =====================================================
 */
-/*
+
 $(document).ready(function () {
   // owl
   $(".owl-wrapper .owl-carousel").owlCarousel({
@@ -143,7 +143,7 @@ $(document).ready(function () {
     },
   });
 });
-*/
+
 /*
 =====================================================
 Todo =============== mixitup ===================

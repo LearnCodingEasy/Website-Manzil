@@ -101,11 +101,12 @@ header .header-logo-nav .container .content {
 header .header-logo-nav .container .content .logo {
   margin-right: 2rem;
   margin-top: -37px;
-  width: 180px;
+  width: 100px;
 }
 header .header-logo-nav .container .content .logo .container img {
   max-width: 100%;
   height: auto;
+  transform: scale(1.3, 1.3);
 }
 header .header-logo-nav .container .content .nav {
   flex-grow: 1;
@@ -317,11 +318,4 @@ header .header-logo-nav.header-scroll-with-window .container .content .logo .con
     top: 25px;
     opacity: 0;
   }
-}
-.window-height {
-  height: 100vh;
-}
-
-.box-lest:not(:last-of-type) {
-  padding-right: 0;
 }
